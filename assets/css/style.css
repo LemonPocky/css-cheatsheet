@@ -1,6 +1,33 @@
 /* This CSS takes a mobile-first approach */
+:root {
+    --purple: purple;
+    --white: white;
+}
 
 /* TODO: Make the body background-color grey */
+body {
+    background-color: #161616;
+}
+
+header h1 {
+    color: var(--purple);
+}
+
+header p {
+    color: var(--white);
+}
+
+.card-header {
+    color: var(--purple);
+}
+
+.card-description {
+    color: var(--purple);
+}
+
+.card-code {
+    color: var(--white);
+}
 
 /* Tablet-specific elements */
 @media screen and (min-width: 768px) {
