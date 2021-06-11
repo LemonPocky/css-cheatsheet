@@ -1,6 +1,6 @@
 /* This CSS takes a mobile-first approach */
 :root {
-    --purple: rgb(202, 1, 202);
+    --purple: #e867ed;
     --white: white;
     --border-color: white;
     --background-color: #292e33;
@@ -19,6 +19,11 @@ body {
     background-color: var(--background-color);
 }
 
+pre {
+    white-space: pre-wrap;
+    overflow: auto;
+}
+
 header h1 {    
     text-align: center;
     color: var(--purple);
@@ -31,17 +36,27 @@ header p {
     margin-bottom: 5%;
 }
 
+code {
+    /* Monospace font stack is used for our code blocks to make it look more like code */
+    font-family: Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console',
+        'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
+        'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier,
+        monospace;
+}
+
 .card-container {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    padding: 1.5rem;
 }
 
 .card {    
     position: relative;
     flex: 100%;
-    border-style: dashed;
-    border-color: var(--border-color);
-    margin: 5% 3%;
+    outline-style: dashed;
+    outline-color: var(--border-color);
 }
 
 .card-header {
@@ -72,12 +87,30 @@ header p {
     color: var(--white);
 }
 
+/* Glow effect on hover */
+.card, .card-header {
+    transition: all 0.5s ease-in-out;
+}
+
+.card:hover,
+.card:hover .card-header {
+    box-shadow: inset 0px 0px 8px
+    rgba(232, 102, 236, 1), 0 0 15px
+    rgba(232, 102, 236, 1);
+}
+
 /* Tablet-specific elements */
 @media screen and (min-width: 768px) {
-
+    .card {
+        flex: 50%;
+        max-width: 50%;
+    }
 }
 
 /* Desktop-specific elements */
 @media screen and (min-width: 992px) {
-
-}
+    .card {
+        flex: 0 0 33.3%;
+        max-width: 33.3%;
+    }
+} 
