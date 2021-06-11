@@ -4,20 +4,40 @@
     --white: white;
 }
 
-/* TODO: Make the body background-color grey */
-body {
-    background-color: #161616;
+* {
+    font-size: 24px;
+    font-family: Calibri, 'Trebuchet MS', sans-serif
 }
 
-header h1 {
+h1 {
+    font-size: 400%;
+}
+
+/* TODO: Make the body background-color grey */
+body {
+    background-color: #222;
+}
+
+header h1 {    
+    text-align: center;
     color: var(--purple);
 }
 
-header p {
+header p {    
+    text-align: center;
     color: var(--white);
 }
 
+.card-container {
+    display: flex;
+}
+
+.card {    
+    flex: 100%;
+}
+
 .card-header {
+    font-size: 200%;
     color: var(--purple);
 }
 
@@ -25,7 +45,11 @@ header p {
     color: var(--purple);
 }
 
-.card-code {
+.card-code {    
+    background-image: linear-gradient(
+        rgba(232, 102, 236, 0.3) 0%,
+        rgba(232, 102, 236, 0.6) 100%
+    );
     color: var(--white);
 }
 
