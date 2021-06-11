@@ -3,6 +3,7 @@
     --purple: purple;
     --white: white;
     --border-color: white;
+    --background-color: #222;
 }
 
 * {
@@ -16,7 +17,7 @@ h1 {
 
 /* TODO: Make the body background-color grey */
 body {
-    background-color: #222;
+    background-color: var(--background-color);
 }
 
 header h1 {    
@@ -34,17 +35,24 @@ header p {
 }
 
 .card {    
+    position: relative;
     flex: 100%;
 }
 
 .card-body {
-    border: dashed;
+    border-style: dashed;
     border-color: var(--border-color);
 }
 
 .card-header {
+    position: absolute;
+    display: inline-block;
     font-size: 200%;
     color: var(--purple);
+    background-color: var(--background-color);
+    border-style: solid;
+    border-color: var(--border-color);
+    top: -20%;
 }
 
 .card-description {
