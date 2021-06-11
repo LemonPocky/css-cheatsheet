@@ -2,6 +2,7 @@
 :root {
     --purple: purple;
     --white: white;
+    --border-color: white;
 }
 
 * {
@@ -34,6 +35,11 @@ header p {
 
 .card {    
     flex: 100%;
+}
+
+.card-body {
+    border: dashed;
+    border-color: var(--border-color);
 }
 
 .card-header {
