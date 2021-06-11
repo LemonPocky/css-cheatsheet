@@ -37,26 +37,24 @@ header p {
 .card {    
     position: relative;
     flex: 100%;
-}
-
-.card-body {
     border-style: dashed;
     border-color: var(--border-color);
 }
 
 .card-header {
-    position: absolute;
-    display: inline-block;
+    position: relative;
     font-size: 200%;
     color: var(--purple);
     background-color: var(--background-color);
     border-style: solid;
     border-color: var(--border-color);
-    top: -20%;
+    margin: -20px 10px 0;
+    border-radius: 10px;
 }
 
 .card-description {
     color: var(--purple);
+    margin: 10px 10px;
 }
 
 .card-code {    
@@ -64,6 +62,9 @@ header p {
         rgba(232, 102, 236, 0.3) 0%,
         rgba(232, 102, 236, 0.6) 100%
     );
+    margin: 10px 10px;
+    padding: 10px 10px;
+    border-radius: 10px;
     color: var(--white);
 }
 
